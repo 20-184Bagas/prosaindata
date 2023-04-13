@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>CRAWLING DATA PTA &#8212; My sample book</title>
   
   
   
@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="UTS PSD" href="UTS_PSD.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="Crawling%20Data%20Berita%20Online.html" />
+    <link rel="prev" title="CRAWLING DATA BERITA ONLINE" href="Crawling%20Data%20Berita%20Online.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,10 +155,13 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Crawling%20Data%20Twitter.html">CRAWLING DATA TWITTER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Crawling%20Data%20Berita%20Online.html">CRAWLING DATA BERITA ONLINE</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">CRAWLING DATA PTA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS_PSD.html">UTS PSD</a></li>
 </ul>
 
@@ -361,9 +364,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -374,19 +375,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>CRAWLING DATA PTA</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -396,7 +389,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell docutils container">
+  <div class="section" id="crawling-data-pta">
+<h1>CRAWLING DATA PTA<a class="headerlink" href="#crawling-data-pta" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">request2</span>
 </pre></div>
@@ -406,10 +401,10 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: request2 in /usr/local/lib/python3.9/dist-packages (0.2)
 Requirement already satisfied: requests in /usr/local/lib/python3.9/dist-packages (from request2) (2.27.1)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests-&gt;request2) (2.0.12)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests-&gt;request2) (1.26.15)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests-&gt;request2) (3.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests-&gt;request2) (2022.12.7)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests-&gt;request2) (1.26.15)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests-&gt;request2) (2.0.12)
 </pre></div>
 </div>
 </div>
@@ -426,15 +421,15 @@ Requirement already satisfied: seaborn in /usr/local/lib/python3.9/dist-packages
 Requirement already satisfied: pandas&gt;=0.25 in /usr/local/lib/python3.9/dist-packages (from seaborn) (1.5.3)
 Requirement already satisfied: numpy!=1.24.0,&gt;=1.17 in /usr/local/lib/python3.9/dist-packages (from seaborn) (1.22.4)
 Requirement already satisfied: matplotlib!=3.6.1,&gt;=3.1 in /usr/local/lib/python3.9/dist-packages (from seaborn) (3.7.1)
-Requirement already satisfied: importlib-resources&gt;=3.2.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (5.12.0)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (0.11.0)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (1.0.7)
-Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (8.4.0)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (23.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (3.0.9)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (1.4.4)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (2.8.2)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (4.39.3)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (0.11.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (1.4.4)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (23.0)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (2.8.2)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (1.0.7)
+Requirement already satisfied: importlib-resources&gt;=3.2.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (5.12.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (3.0.9)
+Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (8.4.0)
 Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas&gt;=0.25-&gt;seaborn) (2022.7.1)
 Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.9/dist-packages (from importlib-resources&gt;=3.2.0-&gt;matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (3.15.0)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib!=3.6.1,&gt;=3.1-&gt;seaborn) (1.16.0)
@@ -482,15 +477,15 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: matplotlib in /usr/local/lib/python3.9/dist-packages (3.7.1)
-Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (8.4.0)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (1.0.7)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (2.8.2)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (4.39.3)
+Requirement already satisfied: numpy&gt;=1.20 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (1.22.4)
 Requirement already satisfied: importlib-resources&gt;=3.2.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (5.12.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (1.4.4)
-Requirement already satisfied: numpy&gt;=1.20 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (1.22.4)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (23.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (1.0.7)
 Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (0.11.0)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (2.8.2)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (23.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (4.39.3)
+Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (8.4.0)
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.9/dist-packages (from matplotlib) (3.0.9)
 Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.9/dist-packages (from importlib-resources&gt;=3.2.0-&gt;matplotlib) (3.15.0)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
@@ -509,12 +504,12 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
 Requirement already satisfied: snscrape in /usr/local/lib/python3.9/dist-packages (0.6.2.20230320)
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
-Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.11.0)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.11.0)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;snscrape) (2.4)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
@@ -806,12 +801,6 @@ ABSTRACT
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://pta.trunojoyo.ac.id/welcome/detail/070411100029
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Penulis : BAHRUL ULUM
-RANCANG BANGUN APLIKASI INTRUSION PREVENTION SYSTEM PADA JARINGAN BERBASIS PROTOKOL TCP/IP MENGGUNAKAN SNORT DAN IPTABLES
-Dalam setiap perusahaan tentunya memiliki data penting berkaitan dengan kegiatan bisnis mereka yang perlu dijaga dan diamankan dari orang yang tidak berhak mengaksesnya. Seringkali  muncul aksi ilegal yang mencoba merusak server bahkan sampai mencuri data perusahaan bisa mengakibatkan kesalahan fatal terhadap kelancaran kegiatan bisnis perusahaan disebabkan data yang tidak valid lagi. Menyikapi masalah tersebut, maka diperlukannya sistem monitoring keamanan yang mampu mengamankan server dari tindakan penyusupan. Intrusion Prevention System (IPS) merupakan solusi yang mampu memberikan keamanan pada jaringan server dari tindakan penyusupan. IPS ini mengembangkan Snort sebagai fungsi pendeteksi yang dikombinasikan dengan IPTables Firewall sebagai pencegah adanya penyusupan. IPS ini juga dilengkapi dengan user interface BASE (Basic Analysis and Security Engine)  dan manajemen rule sehingga memudahkan admin untuk memonitor sistem keamanan dari tindakan penyusupan ke jaringan server. Snort akan membuat alert ketika terdeteksi adanya serangan yang disimpan dalam log Snort dan memerintahkan IPTables untuk melakukan drop terhadap alamat penyerang. Kemudian detail serangan bisa dilihat pada tampilan user interface BASE. Dari hasil pengujian, didapatkan bahwa Snort dan IPTables telah bekerja dengan baik menjadi IPS yang mampu memberikan respon secara cepat ketika terdeteksi adanya serangan. Waktu tanggap rata-rata kurang dari 5 detik, dari awal serangan sampai terdeteksinya alert.
-https://pta.trunojoyo.ac.id/welcome/detail/060411100824
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
 <span class="nn">&lt;ipython-input-8-bbc0cdf20c2a&gt;</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">lengkap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">isi</span><span class="p">)</span>
@@ -863,39 +852,62 @@ https://pta.trunojoyo.ac.id/welcome/detail/060411100824
 <span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">                 method,</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">384</span><span class="s2">         # Trigger any extra validation we need to do.</span>
-<span class="g g-Whitespace">    </span><span class="mi">385</span><span class="s2">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">386</span><span class="s2">             self._validate_conn(conn)</span>
-<span class="g g-Whitespace">    </span><span class="mi">387</span><span class="s2">         except (SocketTimeout, BaseSSLError) as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">388</span><span class="s2">             # Py2 raises this as a BaseSSLError, Py3 raises it as socket timeout.</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span><span class="s2">                     # Python 3 (including for exceptions like SystemExit).</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span><span class="s2">                     # Otherwise it looks like a bug in the code.</span>
+<span class="ne">--&gt; </span><span class="mi">449</span><span class="s2">                     six.raise_from(e, None)</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span><span class="s2">         except (SocketTimeout, BaseSSLError, SocketError) as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span><span class="s2">             self._raise_timeout(err=e, url=url, timeout_value=read_timeout)</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1040</span><span class="s2">         # Force connect early to allow us to validate the connection.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span><span class="s2">         if not getattr(conn, &quot;sock&quot;, None):  # AppEngine might not have  `.sock`</span>
-<span class="ne">-&gt; </span><span class="mi">1042</span><span class="s2">             conn.connect()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1043</span><span class="s2"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1044</span><span class="s2">         if not conn.is_verified:</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/packages/six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">361</span><span class="s2">     def connect(self):</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span><span class="s2">         # Add certificate verification</span>
-<span class="ne">--&gt; </span><span class="mi">363</span><span class="s2">         self.sock = conn = self._new_conn()</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span><span class="s2">         hostname = self.host</span>
-<span class="g g-Whitespace">    </span><span class="mi">365</span><span class="s2">         tls_in_tls = False</span>
+<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span><span class="s2">                 # Python 3</span>
+<span class="g g-Whitespace">    </span><span class="mi">443</span><span class="s2">                 try:</span>
+<span class="ne">--&gt; </span><span class="mi">444</span><span class="s2">                     httplib_response = conn.getresponse()</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span><span class="s2">                 except BaseException as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">446</span><span class="s2">                     # Remove the TypeError from the exception chain in</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/connection.py</span> in <span class="ni">_new_conn</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">172</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">173</span><span class="s2">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">174</span><span class="s2">             conn = connection.create_connection(</span>
-<span class="g g-Whitespace">    </span><span class="mi">175</span><span class="s2">                 (self._dns_host, self.port), self.timeout, **extra_kw</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span><span class="s2">             )</span>
+<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span><span class="s2">             try:</span>
+<span class="ne">-&gt; </span><span class="mi">1377</span><span class="s2">                 response.begin()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1378</span><span class="s2">             except ConnectionError:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1379</span><span class="s2">                 self.close()</span>
 
-<span class="nn">/usr/local/lib/python3.9/dist-packages/urllib3/util/connection.py</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="s2">             if source_address:</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="s2">                 sock.bind(source_address)</span>
-<span class="ne">---&gt; </span><span class="mi">85</span><span class="s2">             sock.connect(sa)</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span><span class="s2">             return sock</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span><span class="s2"> </span>
+<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span><span class="s2">         # read until we get a non-100 response</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="s2">         while True:</span>
+<span class="ne">--&gt; </span><span class="mi">320</span><span class="s2">             version, status, reason = self._read_status()</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span><span class="s2">             if status != CONTINUE:</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span><span class="s2">                 break</span>
+
+<span class="nn">/usr/lib/python3.9/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span><span class="s2">     def _read_status(self):</span>
+<span class="ne">--&gt; </span><span class="mi">281</span><span class="s2">         line = str(self.fp.readline(_MAXLINE + 1), &quot;iso-8859-1&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span><span class="s2">         if len(line) &gt; _MAXLINE:</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span><span class="s2">             raise LineTooLong(&quot;status line&quot;)</span>
+
+<span class="nn">/usr/lib/python3.9/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         while True:</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">704</span><span class="s2">                 return self._sock.recv_into(b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">             except timeout:</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span><span class="s2">                 self._timeout_occurred = True</span>
+
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1240</span><span class="s2">                   &quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot; %</span>
+<span class="g g-Whitespace">   </span><span class="mi">1241</span><span class="s2">                   self.__class__)</span>
+<span class="ne">-&gt; </span><span class="mi">1242</span><span class="s2">             return self.read(nbytes, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1243</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1244</span><span class="s2">             return super().recv_into(buffer, nbytes, flags)</span>
+
+<span class="nn">/usr/lib/python3.9/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1099</span><span class="s2">             if buffer is not None:</span>
+<span class="ne">-&gt; </span><span class="mi">1100</span><span class="s2">                 return self._sslobj.read(len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1101</span><span class="s2">             else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1102</span><span class="s2">                 return self._sslobj.read(len)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -906,6 +918,7 @@ https://pta.trunojoyo.ac.id/welcome/detail/060411100824
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;datapta.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -947,7 +960,7 @@ https://pta.trunojoyo.ac.id/welcome/detail/060411100824
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">CRAWLING DATA BERITA ONLINE</p>
       </div>
     </a>
     <a class="right-next"
@@ -968,20 +981,6 @@ https://pta.trunojoyo.ac.id/welcome/detail/060411100824
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
